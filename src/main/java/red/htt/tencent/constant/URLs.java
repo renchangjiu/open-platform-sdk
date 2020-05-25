@@ -44,5 +44,37 @@ public interface URLs {
     /**
      * 名片OCR
      */
-    String OCR_bc = "https://api.ai.qq.com/fcgi-bin/ocr/ocr_bcocr";
+    String OCR_BUSINESS_CARD = "https://api.ai.qq.com/fcgi-bin/ocr/ocr_bcocr";
+
+
+    /**
+     * 人脸检测与分析
+     */
+    String FACE_DETECT = "https://api.ai.qq.com/fcgi-bin/face/face_detectface";
+
+    /**
+     * 多人脸检测
+     */
+    String FACE_DETECT_MULTI = "https://api.ai.qq.com/fcgi-bin/face/face_detectmultiface";
+
+    /**
+     * 跨年龄人脸识别
+     */
+    String FACE_DETECT_CROSS_AGE = "https://api.ai.qq.com/fcgi-bin/face/face_detectcrossageface";
+
+    /**
+     * 五官定位
+     */
+    String FACE_SHAPE = "https://api.ai.qq.com/fcgi-bin/face/face_faceshape";
+
+    /**
+     * 人脸对比
+     */
+    String FACE_COMPARE = "https://api.ai.qq.com/fcgi-bin/face/face_facecompare";
+
+    /**
+     * 人脸验证	对请求图片进行人脸验证
+     */
+    String FACE_VERIFY = "https://api.ai.qq.com/fcgi-bin/face/face_faceverify";
+
 }

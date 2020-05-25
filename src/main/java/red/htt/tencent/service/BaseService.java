@@ -34,7 +34,9 @@ public class BaseService {
         data.put("sign", sign);
         Map<String, String> params = new HashMap<>(data.size());
         data.forEach((key, val) -> {
-            params.put(key, val.toString());
+            if (val != null) {
+                params.put(key, val.toString());
+            }
         });
         String resStr = Requests.post(url, params, null).execute().body().string();
         return Jsons.json2Bean(resStr, resTypeRef);

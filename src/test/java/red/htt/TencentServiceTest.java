@@ -51,6 +51,13 @@ public class TencentServiceTest {
     }
 
     @Test
+    public void testHandwritingOCR() throws Exception {
+        String image = getImageBase64("tencent-ocr/hand-writing.jpg");
+        TencentResult<OCRHandwritingRes> res = this.getTencentOCRService().handwritingOCR(image, null);
+        System.out.println(res);
+    }
+
+    @Test
     public void testPlateOCR() throws Exception {
         String image = getImageBase64("tencent-ocr/car-plate.jpg");
         TencentResult<OCRPlateRes> res = this.getTencentOCRService().plateOCR(image);

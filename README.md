@@ -11,6 +11,7 @@
    - 通用 OCR (`TencentOCRService#generalOCR`)
    - 营业执照 OCR (`TencentOCRService#bizLicenseOCR`)
    - 银行卡 OCR (`TencentOCRService#creditCardOCR`)
+   - 手写体 OCR (`TencentOCRService#handwritingOCR`)
    - 车牌 OCR (`TencentOCRService#plateOCR`)
    - 名片 OCR (`TencentOCRService#businessCardOCR`)
 

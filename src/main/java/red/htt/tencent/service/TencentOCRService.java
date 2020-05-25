@@ -95,6 +95,22 @@ public class TencentOCRService extends BaseService {
     }
 
     /**
+     * 手写体OCR, 检测和识别图像上面手写体的字段信息
+     *
+     * @param image    原始图片的base64编码数据（原图大小上限1MB，支持JPG、PNG、BMP格式），image和image_url必须至少提供一个
+     * @param imageUrl image和image_url都提供时，仅支持image_url，image和image_url必须至少提供一个
+     * @return res
+     * @see "https://ai.qq.com/doc/handwritingocr.shtml"
+     */
+    public TencentResult<OCRHandwritingRes> handwritingOCR(String image, String imageUrl) throws IOException {
+        Map<String, Object> data = new HashMap<>(6);
+        data.put("image", image);
+        data.put("image_url", imageUrl);
+        return super.request(data, URLs.OCR_HANDWRITING, new TypeReference<TencentResult<OCRHandwritingRes>>() {
+        });
+    }
+
+    /**
      * 车牌OCR, 识别车牌上面的信息
      *
      * @param image 原始图片的base64编码数据（原图大小上限1MB，支持JPG、PNG、BMP格式）

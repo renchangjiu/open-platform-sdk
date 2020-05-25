@@ -8,14 +8,12 @@ import red.htt.tencent.service.TencentOCRService;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Base64;
+import java.util.Properties;
 
 /**
  * @author mio
  */
 public class TencentServiceTest {
-
-    private final int appId = 2111359847;
-    private final String appKey = "QypVbTe4cu6akL8H";
 
     @Test
     public void testIdCardOCR() throws Exception {
@@ -45,7 +43,12 @@ public class TencentServiceTest {
         System.out.println(res);
     }
 
-    private TencentOCRService getTencentOCRService() {
+    private TencentOCRService getTencentOCRService() throws IOException {
+        InputStream in = getClass().getClassLoader().getResourceAsStream("config.properties");
+        Properties prop = new Properties();
+        prop.load(in);
+        int appId = Integer.parseInt(prop.getProperty("tencent.appId"));
+        String appKey = prop.getProperty("tencent.appKey");
         return new TencentOCRService(appId, appKey);
     }
 

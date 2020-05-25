@@ -43,5 +43,5 @@ public interface URLs {
     /**
      * 名片OCR
      */
-    String OCR_bc = "https://api.ai.qq.com/fcgi-bin/ocr/ocr_bcocr";
+    String OCR_BUSINESS_CARD = "https://api.ai.qq.com/fcgi-bin/ocr/ocr_bcocr";
 }

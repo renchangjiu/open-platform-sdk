@@ -43,6 +43,13 @@ public class TencentServiceTest {
         System.out.println(res);
     }
 
+    @Test
+    public void testCreditCardOCR() throws Exception {
+        String image = getImageBase64("tencent-ocr/credit-card.jpg");
+        TencentResult<OCRCreditCardRes> res = this.getTencentOCRService().creditCardOCR(image);
+        System.out.println(res);
+    }
+
     private TencentOCRService getTencentOCRService() throws IOException {
         InputStream in = getClass().getClassLoader().getResourceAsStream("config.properties");
         Properties prop = new Properties();

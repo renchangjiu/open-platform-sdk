@@ -60,7 +60,7 @@ public class TencentOCRService extends BaseService {
      * @see "https://ai.qq.com/doc/ocrgeneralocr.shtml"
      */
     public TencentResult<OCRGeneralRes> generalOCR(String image) throws IOException {
-        Map<String, Object> data = new HashMap<>(2);
+        Map<String, Object> data = new HashMap<>(1);
         data.put("image", image);
         return super.request(data, URLs.OCR_GENERAL, new TypeReference<TencentResult<OCRGeneralRes>>() {
         });
@@ -77,6 +77,20 @@ public class TencentOCRService extends BaseService {
         Map<String, Object> data = new HashMap<>(2);
         data.put("image", image);
         return super.request(data, URLs.OCR_BIZ_LICENSE, new TypeReference<TencentResult<OCRBizLicenseRes>>() {
+        });
+    }
+
+    /**
+     * 银行卡OCR, 识别银行卡上面的字段信息
+     *
+     * @param image 原始图片的base64编码数据（原图大小上限1MB，支持JPG、PNG、BMP格式）
+     * @return res
+     * @see "https://ai.qq.com/doc/ocrcreditcardocr.shtml"
+     */
+    public TencentResult<OCRCreditCardRes> creditCardOCR(String image) throws IOException {
+        Map<String, Object> data = new HashMap<>(1);
+        data.put("image", image);
+        return super.request(data, URLs.OCR_CREDIT_CARD, new TypeReference<TencentResult<OCRCreditCardRes>>() {
         });
     }
 

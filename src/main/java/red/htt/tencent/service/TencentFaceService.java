@@ -23,7 +23,8 @@ public class TencentFaceService extends BaseService {
     /**
      * 人脸检测与分析
      * <p>
-     * 检测给定图片（Image）中的所有人脸（Face）的位置和相应的面部属性。位置包括（x, y, w, h），面部属性包括性别（gender）, 年龄（age）, 表情（expression）, 魅力（beauty）, 眼镜（glass）和姿态（pitch，roll，yaw）。
+     * 检测给定图片（Image）中的所有人脸（Face）的位置和相应的面部属性。位置包括（x, y, w, h），
+     * 面部属性包括性别（gender）, 年龄（age）, 表情（expression）, 魅力（beauty）, 眼镜（glass）和姿态（pitch，roll，yaw）。
      *
      * @param image 原始图片的base64编码数据（原图大小上限1MB，支持JPG、PNG、BMP格式）
      * @param mode  检测模式，0-正常，1-大脸模式（默认1）

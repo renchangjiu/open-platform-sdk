@@ -50,6 +50,21 @@ public class TencentServiceTest {
         System.out.println(res);
     }
 
+    @Test
+    public void testplateOCR() throws Exception {
+        String image = getImageBase64("tencent-ocr/plate.jpg");
+        TencentResult<OCRPlateRes> res = this.getTencentOCRService().plateOCR(image);
+        System.out.println(res);
+    }
+
+    @Test
+    public void testbusinessCardOCR() throws Exception {
+        String image = getImageBase64("tencent-ocr/business-card.jpg");
+        TencentResult<OCRBusinessCardRes> res = this.getTencentOCRService().businessCardOCR(image);
+        System.out.println(res);
+    }
+
+
     private TencentOCRService getTencentOCRService() throws IOException {
         InputStream in = getClass().getClassLoader().getResourceAsStream("config.properties");
         Properties prop = new Properties();

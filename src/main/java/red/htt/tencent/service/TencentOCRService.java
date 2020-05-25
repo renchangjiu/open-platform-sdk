@@ -94,5 +94,31 @@ public class TencentOCRService extends BaseService {
         });
     }
 
+    /**
+     * 车牌OCR, 识别车牌上面的信息
+     *
+     * @param image 原始图片的base64编码数据（原图大小上限1MB，支持JPG、PNG、BMP格式）
+     * @return res
+     * @see "https://ai.qq.com/doc/plateocr.shtml"
+     */
+    public TencentResult<OCRPlateRes> plateOCR(String image) throws IOException {
+        Map<String, Object> data = new HashMap<>(2);
+        data.put("image", image);
+        return super.request(data, URLs.OCR_CAR_PLATE, new TypeReference<TencentResult<OCRPlateRes>>() {
+        });
+    }
 
+    /**
+     * 名片OCR, 识别名片的字段信息
+     *
+     * @param image 原始图片的base64编码数据（原图大小上限1MB，支持JPG、PNG、BMP格式）
+     * @return res
+     * @see "https://ai.qq.com/doc/ocrbcocr.shtml"
+     */
+    public TencentResult<OCRBusinessCardRes> businessCardOCR(String image) throws IOException {
+        Map<String, Object> data = new HashMap<>(2);
+        data.put("image", image);
+        return super.request(data, URLs.OCR_BUSINESS_CARD, new TypeReference<TencentResult<OCRBusinessCardRes>>() {
+        });
+    }
 }

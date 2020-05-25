@@ -5,6 +5,7 @@ package red.htt.tencent.constant;
  */
 public interface URLs {
 
+
     /**
      * 身份证OCR
      */

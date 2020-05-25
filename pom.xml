@@ -9,7 +9,7 @@
     <version>0.1</version>
 
     <name>open-platform-sdk</name>
-    <description>集成了腾讯开放平台、百度智能云、阿里云等平台的多种AI能力</description>
+    <description>集成了腾讯开放平台、百度智能云、阿里云等平台的多种能力</description>
     <url>https://github.com/renchangjiu/open-platform-sdk</url>
 
     <parent>

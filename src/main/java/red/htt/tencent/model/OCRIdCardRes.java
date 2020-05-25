@@ -21,7 +21,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class IdCardOCRRes {
+public class OCRIdCardRes {
 
     private String name;
     private String sex;

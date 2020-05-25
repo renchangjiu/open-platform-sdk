@@ -2,11 +2,10 @@ package red.htt;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
-import red.htt.tencent.model.DriverLicenseOCRRes;
-import red.htt.tencent.model.IdCardOCRRes;
-import red.htt.tencent.model.TencentResult;
+import red.htt.tencent.model.*;
 import red.htt.tencent.service.TencentOCRService;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Base64;
 
@@ -20,19 +19,41 @@ public class TencentServiceTest {
 
     @Test
     public void testIdCardOCR() throws Exception {
-        InputStream in = getClass().getClassLoader().getResourceAsStream("tencent-ocr/idcard.jpg");
-        assert in != null;
-        String image = new String(Base64.getEncoder().encode(IOUtils.toByteArray(in)));
-        TencentResult<IdCardOCRRes> res = new TencentOCRService(appId, appKey).idCardOCR(image, 0);
+        String image = getImageBase64("tencent-ocr/idcard.jpg");
+        TencentResult<OCRIdCardRes> res = this.getTencentOCRService().idCardOCR(image, 0);
         System.out.println(res);
     }
 
     @Test
     public void testDriverLicenseOCR() throws Exception {
-        InputStream in = getClass().getClassLoader().getResourceAsStream("tencent-ocr/driver-license-ocr.jpg");
-        assert in != null;
-        String image = new String(Base64.getEncoder().encode(IOUtils.toByteArray(in)));
-        TencentResult<DriverLicenseOCRRes> res = new TencentOCRService(appId, appKey).driverLicenseOCR(image, 0);
+        String image = getImageBase64("tencent-ocr/driver-license.jpg");
+        TencentResult<OCRDriverLicenseRes> res = this.getTencentOCRService().driverLicenseOCR(image, 0);
         System.out.println(res);
+    }
+
+    @Test
+    public void testGeneralOCR() throws Exception {
+        String image = getImageBase64("tencent-ocr/general.jpg");
+        TencentResult<OCRGeneralRes> res = this.getTencentOCRService().generalOCR(image);
+        System.out.println(res);
+    }
+
+    @Test
+    public void testBizLicenseOCR() throws Exception {
+        String image = getImageBase64("tencent-ocr/biz-license.jpg");
+        TencentResult<OCRBizLicenseRes> res = this.getTencentOCRService().bizLicenseOCR(image);
+        System.out.println(res);
+    }
+
+    private TencentOCRService getTencentOCRService() {
+        return new TencentOCRService(appId, appKey);
+    }
+
+    private String getImageBase64(String path) throws IOException {
+        InputStream in = getClass().getClassLoader().getResourceAsStream(path);
+        assert in != null;
+        String base64 = new String(Base64.getEncoder().encode(IOUtils.toByteArray(in)));
+        in.close();
+        return base64;
     }
 }

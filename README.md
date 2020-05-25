@@ -10,6 +10,9 @@
    - 行驶证驾驶证 OCR (`TencentOCRService#driverLicenseOCR`)
    - 通用 OCR (`TencentOCRService#generalOCR`)
    - 营业执照 OCR (`TencentOCRService#bizLicenseOCR`)
+   - 银行卡 OCR (`TencentOCRService#creditCardOCR`)
+   - 车牌 OCR (`TencentOCRService#plateOCR`)
+   - 名片 OCR (`TencentOCRService#businessCardOCR`)
 
 2. 人脸与人体识别
 

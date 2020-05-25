@@ -31,7 +31,7 @@ public class TencentFaceService extends BaseService {
      * @see "https://ai.qq.com/doc/detectface.shtml"
      */
     public TencentResult<FaceDetectRes> faceDetect(String image, int mode) throws IOException {
-        Map<String, Object> data = new HashMap<>(2);
+        Map<String, Object> data = new HashMap<>(6);
         data.put("image", image);
         data.put("mode", mode);
         return super.request(data, URLs.FACE_DETECT, new TypeReference<TencentResult<FaceDetectRes>>() {

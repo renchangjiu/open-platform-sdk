@@ -29,7 +29,7 @@ public class TencentOCRService extends BaseService {
      * @see "https://ai.qq.com/doc/ocridcardocr.shtml"
      */
     public TencentResult<OCRIdCardRes> idCardOCR(String image, int cardType) throws IOException {
-        Map<String, Object> data = new HashMap<>(2);
+        Map<String, Object> data = new HashMap<>(6);
         data.put("image", image);
         data.put("card_type", cardType);
         return super.request(data, URLs.OCR_ID_CARD, new TypeReference<TencentResult<OCRIdCardRes>>() {
@@ -45,7 +45,7 @@ public class TencentOCRService extends BaseService {
      * @see "https://ai.qq.com/doc/ocrdriverlicenseocr.shtml"
      */
     public TencentResult<OCRDriverLicenseRes> driverLicenseOCR(String image, int type) throws IOException {
-        Map<String, Object> data = new HashMap<>(2);
+        Map<String, Object> data = new HashMap<>(6);
         data.put("image", image);
         data.put("type", type);
         return super.request(data, URLs.OCR_DRIVER_LICENSE, new TypeReference<TencentResult<OCRDriverLicenseRes>>() {
@@ -60,7 +60,7 @@ public class TencentOCRService extends BaseService {
      * @see "https://ai.qq.com/doc/ocrgeneralocr.shtml"
      */
     public TencentResult<OCRGeneralRes> generalOCR(String image) throws IOException {
-        Map<String, Object> data = new HashMap<>(1);
+        Map<String, Object> data = new HashMap<>(5);
         data.put("image", image);
         return super.request(data, URLs.OCR_GENERAL, new TypeReference<TencentResult<OCRGeneralRes>>() {
         });
@@ -74,7 +74,7 @@ public class TencentOCRService extends BaseService {
      * @see "https://ai.qq.com/doc/ocrbizlicenseocr.shtml"
      */
     public TencentResult<OCRBizLicenseRes> bizLicenseOCR(String image) throws IOException {
-        Map<String, Object> data = new HashMap<>(2);
+        Map<String, Object> data = new HashMap<>(6);
         data.put("image", image);
         return super.request(data, URLs.OCR_BIZ_LICENSE, new TypeReference<TencentResult<OCRBizLicenseRes>>() {
         });
@@ -88,7 +88,7 @@ public class TencentOCRService extends BaseService {
      * @see "https://ai.qq.com/doc/ocrcreditcardocr.shtml"
      */
     public TencentResult<OCRCreditCardRes> creditCardOCR(String image) throws IOException {
-        Map<String, Object> data = new HashMap<>(1);
+        Map<String, Object> data = new HashMap<>(5);
         data.put("image", image);
         return super.request(data, URLs.OCR_CREDIT_CARD, new TypeReference<TencentResult<OCRCreditCardRes>>() {
         });

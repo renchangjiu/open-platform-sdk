@@ -1,7 +1,6 @@
 package red.htt.tencent.model;
 
 import lombok.Data;
-import lombok.experimental.Accessors;
 
 import java.util.List;
 
@@ -40,7 +39,6 @@ import java.util.List;
  * @see "https://ai.qq.com/doc/detectface.shtml"
  */
 @Data
-@Accessors(chain = true)
 public class FaceDetectRes {
     private Integer image_width;
     private Integer image_height;
@@ -48,7 +46,6 @@ public class FaceDetectRes {
 
 
     @Data
-    @Accessors(chain = true)
     public static class FaceListBean {
         private String face_id;
         private Integer x;
@@ -67,7 +64,6 @@ public class FaceDetectRes {
 
 
         @Data
-        @Accessors(chain = true)
         public static class FaceShapeBean {
             private List<FaceProfileBean> face_profile;
             private List<LeftEyeBean> left_eye;
@@ -79,7 +75,6 @@ public class FaceDetectRes {
 
 
             @Data
-            @Accessors(chain = true)
             public static class FaceProfileBean {
                 private Integer x;
                 private Integer y;
@@ -87,7 +82,6 @@ public class FaceDetectRes {
 
 
             @Data
-            @Accessors(chain = true)
             public static class LeftEyeBean {
                 private Integer x;
                 private Integer y;
@@ -95,7 +89,7 @@ public class FaceDetectRes {
 
 
             @Data
-            @Accessors(chain = true)
+
             public static class RightEyeBean {
                 private Integer x;
                 private Integer y;
@@ -103,7 +97,6 @@ public class FaceDetectRes {
 
 
             @Data
-            @Accessors(chain = true)
             public static class LeftEyebrowBean {
                 private Integer x;
                 private Integer y;
@@ -111,7 +104,6 @@ public class FaceDetectRes {
 
 
             @Data
-            @Accessors(chain = true)
             public static class RightEyebrowBean {
                 private Integer x;
                 private Integer y;
@@ -119,7 +111,6 @@ public class FaceDetectRes {
 
 
             @Data
-            @Accessors(chain = true)
             public static class MouthBean {
                 private Integer x;
                 private Integer y;
@@ -127,7 +118,6 @@ public class FaceDetectRes {
 
 
             @Data
-            @Accessors(chain = true)
             public static class NoseBean {
                 private Integer x;
                 private Integer y;

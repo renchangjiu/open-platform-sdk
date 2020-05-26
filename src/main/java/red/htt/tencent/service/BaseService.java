@@ -15,7 +15,7 @@ import java.util.*;
 /**
  * @author mio
  */
-public class BaseService {
+public abstract class BaseService {
 
     private final int appId;
 
@@ -38,7 +38,7 @@ public class BaseService {
                 params.put(key, val.toString());
             }
         });
-        String resStr = Requests.post(url, params, null).execute().body().string();
+        String resStr = Objects.requireNonNull(Requests.post(url, params, null).execute().body()).string();
         return Jsons.json2Bean(resStr, resTypeRef);
     }
 
@@ -57,7 +57,7 @@ public class BaseService {
             Arrays.sort(keys);
             sb = new StringBuilder();
             for (Object key : keys) {
-                Object val = data.get(key);
+                Object val = data.get(key.toString());
                 if (val != null && Strings.isNotEmpty(val.toString())) {
                     sb.append(key)
                             .append("=")

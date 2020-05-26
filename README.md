@@ -17,7 +17,7 @@
 
 2. 人脸与人体识别
 
-#### 暂无
+   - 人脸检测与分析 (`TencentFaceService#faceDetect`)
 
 ### 二、百度智能云
 

@@ -73,7 +73,7 @@ public interface URLs {
     String FACE_COMPARE = "https://api.ai.qq.com/fcgi-bin/face/face_facecompare";
 
     /**
-     * 人脸验证	对请求图片进行人脸验证
+     * 人脸验证
      */
     String FACE_VERIFY = "https://api.ai.qq.com/fcgi-bin/face/face_faceverify";
 

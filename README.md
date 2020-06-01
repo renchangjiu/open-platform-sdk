@@ -18,6 +18,10 @@
 2. 人脸与人体识别
 
    - 人脸检测与分析 (`TencentFaceService#faceDetect`)
+   - 多人脸检测 (`TencentFaceService#faceDetectMulti`)
+   - 跨年龄人脸识别 (`TencentFaceService#faceDetectCrossAge`)
+   - 五官定位 (`TencentFaceService#faceShape`)
+   - 人脸对比 (`TencentFaceService#faceCompare`)
 
 ### 二、百度智能云
 

@@ -1,2 +1,5 @@
 tencent.appId=YOUR_APP_ID_HERE
 tencent.appKey=YOUR_APP_KEY_HERE
+
+tencent.SecretId=YOUR_SecretId_HERE
+tencent.SecretKey=YOUR_SecretKey_HERE

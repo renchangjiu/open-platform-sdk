@@ -8,9 +8,8 @@ import java.math.BigInteger;
  *
  * @author su
  */
-public class BinUtils {
-
-    private BinUtils() {
+public class Bins {
+    private Bins() {
     }
 
     /**

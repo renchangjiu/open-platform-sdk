@@ -1,7 +1,6 @@
-package red.htt.tencent.model;
+package red.htt.tencent.v1.model;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * 参数名称	        是否必选	数据类型	描述

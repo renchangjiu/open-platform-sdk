@@ -1,4 +1,4 @@
-package red.htt.tencent.model;
+package red.htt.tencent.v1.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

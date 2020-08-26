@@ -1,4 +1,4 @@
-package red.htt.tencent.service;
+package red.htt.tencent.v1.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import red.htt.utils.Hashs;

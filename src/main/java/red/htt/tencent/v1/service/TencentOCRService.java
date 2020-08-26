@@ -1,8 +1,8 @@
-package red.htt.tencent.service;
+package red.htt.tencent.v1.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import red.htt.tencent.constant.URLs;
-import red.htt.tencent.model.*;
+import red.htt.tencent.v1.constant.URLs;
+import red.htt.tencent.v1.model.*;
 
 import java.io.IOException;
 import java.util.HashMap;

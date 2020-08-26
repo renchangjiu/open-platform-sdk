@@ -1,9 +1,10 @@
 package red.htt.tencent;
 
 import org.junit.Test;
-import red.htt.tencent.model.*;
+import red.htt.tencent.v1.model.*;
 
 /**
+ *
  * @author mugi
  */
 public class TencentFaceServiceTest extends TencentServiceTest {

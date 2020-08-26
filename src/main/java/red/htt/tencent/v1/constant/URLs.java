@@ -1,4 +1,4 @@
-package red.htt.tencent.constant;
+package red.htt.tencent.v1.constant;
 
 /**
  * @author mio

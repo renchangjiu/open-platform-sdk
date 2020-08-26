@@ -1,4 +1,4 @@
-package red.htt.tencent.model;
+package red.htt.tencent.v1.model;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -11,32 +11,43 @@ import java.util.List;
  * + + item	        是	    string	字段名称
  * + + itemstring	是	    string	字段识别出来的信息
  * + + itemcoord	是	    object	字段在图像中的像素坐标，包括左上角坐标x,y，以及宽、高width, height
- * + + itemconf	    是	    float	字段置信度
+ * + + words	    是	    array	字段识别出来的每个字的信息
+ * + + + character	是	    string	识别出的单字字符
+ * + + + confidence	是	    float	识别出的单字字符对应的置信度
  *
  * @author mio
- * @see "https://ai.qq.com/doc/ocrbizlicenseocr.shtml"
+ * @see "https://ai.qq.com/doc/ocrgeneralocr.shtml"
  */
 @Data
 @Accessors(chain = true)
-public class OCRBizLicenseRes {
+public class OCRGeneralRes {
 
     private List<ItemListBean> item_list;
 
     @Data
     @Accessors(chain = true)
     public static class ItemListBean {
+
         private String item;
         private String itemstring;
-        private Double itemconf;
         private List<ItemcoordBean> itemcoord;
+        private List<WordsBean> words;
 
         @Data
         @Accessors(chain = true)
         public static class ItemcoordBean {
-            private Integer x;
-            private Integer y;
-            private Integer width;
-            private Integer height;
+            private int x;
+            private int y;
+            private int width;
+            private int height;
+        }
+
+        @Data
+        @Accessors(chain = true)
+        public static class WordsBean {
+            private String character;
+            private double confidence;
+
         }
     }
 }

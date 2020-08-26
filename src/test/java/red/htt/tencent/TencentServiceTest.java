@@ -1,9 +1,8 @@
 package red.htt.tencent;
 
 import org.apache.commons.io.IOUtils;
-import red.htt.tencent.service.BaseService;
-import red.htt.tencent.service.TencentFaceService;
-import red.htt.tencent.service.TencentOCRService;
+import red.htt.tencent.v1.service.TencentFaceService;
+import red.htt.tencent.v1.service.TencentOCRService;
 
 import java.io.IOException;
 import java.io.InputStream;
